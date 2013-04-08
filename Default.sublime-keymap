@@ -1,0 +1,14 @@
+[
+	{
+		"keys": ["ctrl+shift+1"],
+		"command": "tau_list_tasks"
+	},
+	{
+		"keys": ["ctrl+shift+2"],
+		"command": "tau_start_task"
+	},
+	{
+		"keys": ["ctrl+shift+3"],
+		"command": "tau_stop_task"
+	}
+]

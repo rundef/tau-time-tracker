@@ -1,0 +1,31 @@
+[
+	{
+		"caption": "Tools",
+		"mnemonic": "t",
+		"id": "tools",
+		"children":
+		[
+			{
+				"caption": "Tau Time Tracker",
+				"mnemonic": "t",
+				"id": "tau",
+				"children":
+				[
+					{
+						"command": "tau_list_tasks", 
+						"caption": "List tasks"
+					},
+					{
+						"command": "tau_start_task", 
+						"caption": "Start a new task"
+					},
+					{
+						"command": "tau_stop_task", 
+						"caption": "Stop the current task"
+					}
+				]
+			}
+		]
+	}
+]
+
