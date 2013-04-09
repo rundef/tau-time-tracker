@@ -4,7 +4,7 @@ A simple plugin to track your time.
 
 ## Install
 
-Use the [Sublime Package Manager](http://wbond.net/sublime_packages/package_control) to install.
+Use the [Sublime Package Control](http://wbond.net/sublime_packages/package_control) to install.
 
 ## Keybindings
 
