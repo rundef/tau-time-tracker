@@ -18,6 +18,8 @@ class TauHelper(sublime_plugin.WindowCommand):
 		return None
 
 
+
+
 	def get_tasks(self):
 		date = time.strftime("%Y-%m-%d")
 
@@ -31,6 +33,8 @@ class TauHelper(sublime_plugin.WindowCommand):
 		return tasks
 
 
+
+
 	def start_task(self, task_name):
 		json_object = {}
 		json_object['task_name'] = task_name
@@ -40,6 +44,11 @@ class TauHelper(sublime_plugin.WindowCommand):
 		json.dump(json_object, json_file)
 		json_file.close()
 
+		time_str = time.strftime("%I:%M %p")
+		sublime.status_message("* Starting task '%s' at %s" % (task_name, time_str))
+
+
+
 
 	def start_existing_task(self, index):
 		tasks = self.get_tasks()
@@ -47,7 +56,11 @@ class TauHelper(sublime_plugin.WindowCommand):
 
 
 
+
 	def has_current_task(self):
+		if not os.path.exists(self.path + self.settings.get('tmp_folder') + '/current.json'):
+			return False
+
 		json_file = open(self.path + self.settings.get('tmp_folder') + '/current.json')
 		current = json.load(json_file)
 		json_file.close()
@@ -59,10 +72,10 @@ class TauHelper(sublime_plugin.WindowCommand):
 
 
 
+
 	def stop_task(self):
 		if not self.has_current_task():
 			return
-
 
 		tasks = self.get_tasks()
 		date = time.strftime("%Y-%m-%d")
@@ -86,6 +99,14 @@ class TauHelper(sublime_plugin.WindowCommand):
 				item['task_time'] = str(int(item['task_time']) + int(task['task_time']))
 				existing_task = True
 				break
+
+
+		time_str = time.strftime("%I:%M %p")
+		total_minutes = int(task['task_time'])
+		hours = floor(total_minutes / 60)
+		minutes = total_minutes - (hours * 60)
+
+		sublime.status_message("* Stopping task '%s' at %s (total duration: %01dh%02d)" % (task['task_name'], time_str, hours, minutes))
 
 
 		if not existing_task:
