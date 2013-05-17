@@ -14,7 +14,7 @@ from math import floor, ceil
 class TauHelper(sublime_plugin.WindowCommand):
 	def __init__(self, *args):
 		self.settings = sublime.load_settings('Tau.sublime-settings')
-		self.path = os.path.dirname(os.path.abspath(__file__)) + '/'
+		self.path = sublime.packages_path() + '/Tau Time Tracker/'
 		return None
 
 
