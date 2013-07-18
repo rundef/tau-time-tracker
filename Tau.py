@@ -52,7 +52,7 @@ class TauHelper(sublime_plugin.WindowCommand):
 
 	def start_existing_task(self, index):
 		tasks = self.get_tasks()
-		self.record_task(tasks[index]['task_name'])
+		self.start_task(tasks[index]['task_name'])
 
 
 
