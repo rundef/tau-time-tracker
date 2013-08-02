@@ -13,7 +13,7 @@
 				[
 					{
 						"command": "tau_list_tasks", 
-						"caption": "List tasks"
+						"caption": "List today's tasks"
 					},
 					{
 						"command": "tau_start_task", 
@@ -22,6 +22,10 @@
 					{
 						"command": "tau_stop_task", 
 						"caption": "Stop the current task"
+					},
+					{
+						"command": "tau_list_logs", 
+						"caption": "Lists previous days tasks"
 					}
 				]
 			}

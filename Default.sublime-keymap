@@ -10,5 +10,9 @@
 	{
 		"keys": ["ctrl+shift+3"],
 		"command": "tau_stop_task"
+	},
+	{
+		"keys": ["ctrl+shift+4"],
+		"command": "tau_list_logs"
 	}
 ]

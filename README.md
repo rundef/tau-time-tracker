@@ -6,14 +6,12 @@ A simple plugin to track your time.
 
 Use the [Sublime Package Control](http://wbond.net/sublime_packages/package_control) to install.
 
-## Keybindings
+## Default keybindings
 
-* Ctrl + Shift + 1: List the tasks (You can add time to a task by clicking on it)
+* Ctrl + Shift + 1: List today's tasks (You can add time to a task by clicking on it)
 * Ctrl + Shift + 2: Start a new task
 * Ctrl + Shift + 3: Stop the current task
-
-You can only view the current day's tasks.  
-Everything is logged in the logs folder.
+* Ctrl + Shift + 4: List previous days tasks
 
 # License
 
